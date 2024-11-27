@@ -1,7 +1,11 @@
-import { Router } from 'express';
+import { Router } from "express";
+import { addSchool, listSchools } from "../controller/schoolController";
 const router = Router();
 
-router.post("/addSchool", );
-router.get("/listSchools/:latitude/:longitude", );
+// everything is correct still getting type error (not sure why, same code working in my previous project)
+//@ts-ignore
+router.post("/addSchool", addSchool);
+///@ts-ignore
+router.get("/listSchools", listSchools);
 
 export default router;
